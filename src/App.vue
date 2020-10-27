@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-    
+    <Todos v-bind:todos="todos" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Todos from './components/Todos.vue';
 
 export default {
   name: 'App',
   components: {
+    Todos
+  },
    data() {
     return{
       todos: [
@@ -29,9 +31,9 @@ export default {
         complete: false
       }
       ]
-      }
     }
   }
+  
 }
 </script>
 
